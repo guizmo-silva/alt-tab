@@ -1,0 +1,78 @@
+baseURL = 'https://example.org/'
+locale = 'pt-br'
+title = 'Alt+Tab Podcast'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+[module]
+  [[module.imports]]
+    path = "github.com/babeneso/hugo-neso"
+  [[module.mounts]]
+  
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
+
+[menus]
+  [[menus.main]]
+    identifier = 'posts'
+    name       = 'Episódios'
+    pageRef    = '/posts'
+    weight     = 10
+
+[params]
+  [params.neso]
+    [params.neso.seo]
+      site_description = "A visão caiçara de cinco amigos da baixada santista sobre cultura pop, música, filmes e o mundo."
+    [params.neso.list]
+      prominent_first_entry = true
+    [params.neso.page]
+      hide_description_in_single = true
+    [params.neso.home]
+      [params.neso.home.profile]
+        avatar_image = "images/podcast.png"
+        avatar_image_alt_text = "Logo do podcast"
+    #   [[params.neso.home.profile.link_btns]]
+    #    label = "Ouça"
+    #    url = "https://open.spotify.com/show/COLE_AQUI_O_ID"      
+      [params.neso.home.list]
+        featured_entries_limit = 10
+    [params.neso.branding]
+      apple_touch_icon = "apple-touch-icon.png"
+    
+    [[params.neso.social.links]]
+      name = "instagram"
+      url  = "https://www.instagram.com/_altplustab/"
+    
+    [[params.neso.social.links]]
+      name = "spotify"
+      url  = "https://open.spotify.com/show/6LfQuNtzCAzpmwowj2tPZV?si=hkmSDMfRRRCegxUTrcp6pg"
+      
+    [[params.neso.social.links]]
+      name = "youtube"
+      url  = "https://www.youtube.com/channel/UC4gWdl0yO_qL0uCN1qx9qUw"
+    
+    [[params.neso.social.links]]
+      name = "applepodcasts"
+      url  = "https://itunes.apple.com/us/podcast/alt-tab/id1342047659?mt=2"
+    
+    
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
