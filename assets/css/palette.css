@@ -14,14 +14,15 @@
     --color-neso-bg2: oklch(94.6% 0.003 256.542); /* ~ Gray 100 */
     --color-neso-bg3: oklch(93% 0.004 256.531); /* ~ Gray 200 */
     
-    --color-neso-accent: #ffff00ff;
-    --color-neso-splash: #ffff00ff;
+    --color-neso-accent: #ff8800;
+    --color-neso-splash: #ff8800;
     
     --color-neso-okay: #05bd05;
     --color-neso-note: #04a8da;
     --color-neso-ding: #e89700;
     --color-neso-oops: #ee3f3f;
 }
+
 
 @layer theme {
     :root, :host {
@@ -41,8 +42,8 @@
             --color-neso-bg2: oklch(20% 0.01 264.665); /* ~ Gray 900 */
             --color-neso-bg3: oklch(25.8% 0.012 256.848); /* ~ Gray 800 */
             
-            --color-neso-accent: #ffff00ff;
-            --color-neso-splash: #ffff00ff;
+            --color-neso-accent: #ffff00;
+            --color-neso-splash: #ffff00;
             
             --color-neso-okay: #3fd63f;
             --color-neso-note: #04a8da;

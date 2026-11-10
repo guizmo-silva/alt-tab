@@ -1,6 +1,7 @@
 baseURL = 'https://example.org/'
 locale = 'pt-br'
 title = 'Alt+Tab Podcast'
+removePathAccents = true
 
 [markup]
   [markup.goldmark]
@@ -37,6 +38,7 @@ title = 'Alt+Tab Podcast'
 
 [params]
   [params.neso]
+    time_format = "2 de January de 2006"
     [params.neso.seo]
       site_description = "A visão caiçara de cinco amigos da baixada santista sobre cultura pop, música, filmes e o mundo."
     [params.neso.list]
